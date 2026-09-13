@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.mp4
+session_log.csv
+.deepface/
+.streamlit/secrets.toml
