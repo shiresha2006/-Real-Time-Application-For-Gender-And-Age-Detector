@@ -1,0 +1,50 @@
+:root {
+  --ink: #14181f;
+  --surface: #1c212b;
+  --surface-raised: #252b38;
+  --line: #343c4d;
+  --text: #edeef2;
+  --text-dim: #949cae;
+  --gold: #d4a24c;
+  --sage: #6b9080;
+  --red: #c8564b;
+
+  --font-display: "Sora", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+button, select {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

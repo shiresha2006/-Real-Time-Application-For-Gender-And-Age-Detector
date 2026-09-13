@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Signal Vision — Car Colour & Crowd Detector</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="brand">
+        <span class="dot"></span>
+        <h1>Signal Vision</h1>
+      </div>
+      <p class="tag">Car colour detection · car count · people count at a traffic signal</p>
+    </header>
+
+    <main>
+      <section class="panel upload-panel">
+        <div id="dropzone" class="dropzone">
+          <input type="file" id="fileInput" accept="image/*" hidden>
+          <div id="dzEmpty" class="dz-empty">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M12 16V4M12 4l-4 4M12 4l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <p>Drop a traffic image here or click to browse</p>
+            <span class="hint">JPG / PNG</span>
+          </div>
+          <img id="previewImg" class="preview" hidden>
+        </div>
+        <button id="detectBtn" class="btn" disabled>Run Detection</button>
+        <div id="status" class="status"></div>
+      </section>
+
+      <section class="panel result-panel">
+        <div class="stats">
+          <div class="stat">
+            <span class="stat-value" id="carCount">0</span>
+            <span class="stat-label">Cars</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value" id="peopleCount">0</span>
+            <span class="stat-label">People</span>
+          </div>
+        </div>
+        <div class="legend">
+          <span class="chip"><i class="box red"></i> Blue car</span>
+          <span class="chip"><i class="box blue"></i> Other colour car</span>
+          <span class="chip"><i class="box green"></i> Person</span>
+        </div>
+        <div id="resultWrap" class="result-wrap">
+          <img id="resultImg" hidden>
+          <div id="resultEmpty" class="result-empty">Detection output will appear here</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
